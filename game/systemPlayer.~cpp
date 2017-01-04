@@ -1,0 +1,26 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "systemPlayer.h"
+
+
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+void systemPlayer::createFrame(TCanvas* canvasFrame,TForm* formForUse) const
+{
+  TColor colorFrame = clBlue;
+  TRect playerFrameOut(10,100,(formForUse->Width)/2,600);
+  canvasFrame->Brush->Color = colorFrame;
+  canvasFrame->Rectangle(playerFrameOut);
+
+  colorFrame = cl3DDkShadow;
+  TRect playerFrameIn(20,110,((formForUse->Width)/2)-10,590);
+  canvasFrame->Brush->Color = colorFrame;
+  canvasFrame->Rectangle(playerFrameIn);
+
+}

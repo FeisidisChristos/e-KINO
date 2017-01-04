@@ -1,0 +1,27 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "systemMain.h"
+
+
+//---------------------------------------------------------------------------
+
+#pragma package(smart_init)
+
+
+void systemMain::createFrame(TCanvas* canvasFrame, TForm* formForUse) const
+{
+   TColor colorFrame = clBlue;
+   TRect mainFrameOut((((formForUse->Width)/2)+40),100,1330,600);
+   canvasFrame->Brush->Color = colorFrame;
+   canvasFrame->Rectangle(mainFrameOut);
+
+   colorFrame = cl3DDkShadow;
+   TRect mainFrameIn((((formForUse->Width)/2)+50),110,1320,590);
+   canvasFrame->Brush->Color = colorFrame;
+   canvasFrame->Rectangle(mainFrameIn);
+
+
+}
