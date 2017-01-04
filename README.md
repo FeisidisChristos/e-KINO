@@ -1,0 +1,2 @@
+# e-KINO
+lucky game
